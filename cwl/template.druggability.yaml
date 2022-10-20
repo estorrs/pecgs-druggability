@@ -1,0 +1,7 @@
+annotate_trials_keyword: a_string
+normal_sample_name: a_string
+tumor_sample_name: a_string
+variant_file_type: a_string
+variant_filepath:
+  class: File
+  path: a/file/path
