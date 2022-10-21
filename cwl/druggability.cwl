@@ -5,6 +5,8 @@ arguments:
 - position: 0
   prefix: --druggability-dir
   valueFrom: /pecgs-druggability/src/druggability
+- position: 0
+  prefix: --d
 baseCommand:
 - /usr/bin/python
 - /pecgs-druggability/src/run_druggability.py

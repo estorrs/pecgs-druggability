@@ -20,7 +20,7 @@ parser.add_argument('variant_file_type', type=str, choices=['maf', 'fusion', 'ba
 parser.add_argument('--output-dir', type=str, default='output',
     help='alteration database matches')
 
-parser.add_argument('--d', action="store_true", type=bool,
+parser.add_argument('--d', action="store_true",
     help='debug mode')
 
 parser.add_argument('--normal-sample-name', type=str,
