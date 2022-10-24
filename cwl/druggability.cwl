@@ -46,7 +46,7 @@ outputs:
     glob: output/*.txt
   type:
     items: File
-    type: Array
+    type: array
 requirements:
 - class: DockerRequirement
   dockerPull: estorrs/pecgs-druggability:0.0.1
