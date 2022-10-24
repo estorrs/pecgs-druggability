@@ -26,7 +26,7 @@ parser.add_argument('--d', action="store_true",
 parser.add_argument('--normal-sample-name', type=str,
     help='normal sample name')
 
-parser.add_argument('--annotate-trials-keyword', type=str, choices=['CHOL', 'MM', 'CRC', ''],
+parser.add_argument('--annotate-trials-keyword', type=str, choices=['CHOL', 'MM', 'CRC', 'NONE'],
     help='report clinical trials for this disease keyword')
 
 parser.add_argument('--druggability-dir', type=str,
@@ -46,7 +46,7 @@ def druggability_cli(script_fp, t, f, nn, tn, l, o, at, ato):
         '-l', l,
         '-o', o,
     ]
-    if at is not None and at:
+    if at is not None and at != 'NONE':
         pieces += [
             '-at', at,
             '-ato', ato,
