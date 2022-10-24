@@ -4,6 +4,8 @@ import logging
 import subprocess
 from pathlib import Path
 
+KEYWORDS = ['mm', 'chol', 'crc']
+
 logging.basicConfig(format='%(asctime)s - %(message)s', level=logging.INFO)
 
 parser = argparse.ArgumentParser()
@@ -26,7 +28,7 @@ parser.add_argument('--d', action="store_true",
 parser.add_argument('--normal-sample-name', type=str,
     help='normal sample name')
 
-parser.add_argument('--annotate-trials-keyword', type=str, choices=['CHOL', 'MM', 'CRC', ''],
+parser.add_argument('--annotate-trials-keyword', type=str,
     help='report clinical trials for this disease keyword')
 
 parser.add_argument('--druggability-dir', type=str,
@@ -65,6 +67,11 @@ def run_druggability(args):
     logging.info(f'setting working directory as {args.druggability_dir}')
     script_fp = os.path.join(args.druggability_dir, 'druggability.py')
     os.chdir(args.druggability_dir)
+
+    # check keyword
+    if args.annotate_trials_keyword.lower() not in KEYWORDS:
+        logging.info(f'keyword {args.annotate_trials_keyword} not in {KEYWORDS}, setting to ""')
+        args.annotate_trials_keyword = ''
 
     cmd = druggability_cli(
         script_fp, args.variant_file_type, args.variant_filepath,
