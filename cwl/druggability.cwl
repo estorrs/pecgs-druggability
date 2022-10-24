@@ -6,7 +6,7 @@ arguments:
   prefix: --druggability-dir
   valueFrom: /pecgs-druggability/src/druggability
 baseCommand:
-- /usr/bin/python
+- python
 - /pecgs-druggability/src/run_druggability.py
 class: CommandLineTool
 cwlVersion: v1.0
