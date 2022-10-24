@@ -16,26 +16,26 @@ id: druggability
 inputs:
 - id: tumor_sample_name
   inputBinding:
-    position: '1'
+    position: 1
   type: string
 - id: variant_filepath
   inputBinding:
-    position: '2'
+    position: 2
   type: File
 - default: maf
   id: variant_file_type
   inputBinding:
-    position: '3'
+    position: 3
   type: string?
 - id: normal_sample_name
   inputBinding:
-    position: '0'
+    position: 0
     prefix: --normal-sample-name
   type: string
-- default: chol
+- default: CHOL
   id: annotate_trials_keyword
   inputBinding:
-    position: '0'
+    position: 0
     prefix: --annotate-trials-keyword
   type: string?
 - default: /miniconda/envs/druggability/bin:$PATH
