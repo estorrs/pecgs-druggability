@@ -30,7 +30,7 @@ inputs:
     position: 0
     prefix: --normal-sample-name
   type: string
-- default: CHOL
+- default: ''
   id: annotate_trials_keyword
   inputBinding:
     position: 0
