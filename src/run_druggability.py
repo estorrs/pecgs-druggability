@@ -75,7 +75,7 @@ def run_druggability(args):
     logging.info('druggability completed')
     
     logging.info(f'output written to {output_fp}')
-    if args.annotate_trials_keyword is not None:
+    if args.annotate_trials_keyword is not None and args.annotate_trials_keyword:
         logging.info(f'aux output written to {at_output_fp}')
     else:
         f = open(at_output_fp, 'w')
