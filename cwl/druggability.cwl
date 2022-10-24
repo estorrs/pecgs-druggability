@@ -43,12 +43,10 @@ label: druggability
 outputs:
 - id: output
   outputBinding:
-    glob: output/output.txt
-  type: File
-- id: aux_trials_output
-  outputBinding:
-    glob: output/aux_trials_output.txt
-  type: File
+    glob: output/*.txt
+  type:
+    items: File
+    type: Array
 requirements:
 - class: DockerRequirement
   dockerPull: estorrs/pecgs-druggability:0.0.1
