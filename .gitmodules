@@ -1,3 +1,6 @@
 [submodule "submodules/neoscan"]
 	path = submodules/neoscan
 	url = https://github.com/ding-lab/neoscan
+[submodule "src/druggability"]
+	path = src/druggability
+	url = https://github.com/ding-lab/druggability
