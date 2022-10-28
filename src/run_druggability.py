@@ -4,7 +4,7 @@ import logging
 import subprocess
 from pathlib import Path
 
-KEYWORDS = ['mm', 'chol', 'crc']
+KEYWORDS = ['chol']
 
 logging.basicConfig(format='%(asctime)s - %(message)s', level=logging.INFO)
 
