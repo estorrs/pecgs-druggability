@@ -80,8 +80,15 @@ def run_druggability(args):
     logging.info(f'executing command: {cmd}')
     subprocess.check_output(cmd, shell=True)
     logging.info('druggability completed')
-    
+
     logging.info(f'output written to {output_fp}')
+
+    # create empty file if druggability pipeline doesnt find canidates
+    if not os.path.exists(output_fp):
+        logging.info('WARNING: output is empty')
+        f = open(output_fp, 'w')
+        f.close()
+
     if args.annotate_trials_keyword is not None and args.annotate_trials_keyword:
         logging.info(f'aux output written to {at_output_fp}')
     else:
